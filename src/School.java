@@ -31,6 +31,33 @@ public class School {
         course.addStudent(student);
     }
 
+    public Teacher getTeacherById(int id) {
+        for (Teacher teacher : teachers) {
+            if (teacher.getId() == id) {
+                return teacher;
+            }
+        }
+        return null;
+    }
+
+    public Student getStudentById(int id) {
+        for (Student student : students) {
+            if (student.getId() == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public Course getCourseByName(String name) {
+        for (Course course : courses) {
+            if (course.getName().equals(name)) {
+                return course;
+            }
+        }
+        return null;
+    }
+
     public void printSchoolDetails() {
         System.out.println("School Name: " + name);
         System.out.println("Teachers:");

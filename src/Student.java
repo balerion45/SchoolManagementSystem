@@ -27,6 +27,10 @@ public class Student extends Person {
         attendanceRecords.add(attendance);
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", Grade Level: " + gradeLevel + ", Courses: " + courses;
@@ -36,7 +40,7 @@ public class Student extends Person {
     public void printReport() {
         System.out.println("Courses Enrolled:");
         for (Course course : courses) {
-                        System.out.println(course);
+            System.out.println(course);
         }
         System.out.println("Grades:");
         for (Grade grade : grades) {
@@ -48,4 +52,3 @@ public class Student extends Person {
         }
     }
 }
-

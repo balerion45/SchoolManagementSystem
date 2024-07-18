@@ -15,6 +15,10 @@ public class Teacher extends Person {
         courses.add(course);
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", Subject: " + subject;
